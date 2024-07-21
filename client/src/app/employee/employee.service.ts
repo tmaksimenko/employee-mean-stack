@@ -25,7 +25,7 @@ export class EmployeeService {
   }
 
   private getEmployee (id: string) {
-    this.http.get<Employee>(`${this.url}/employee`)
+    this.http.get<Employee>(`${this.url}/employees/${id}`)
         .subscribe(employee => {
           this.employee$.set(employee);
           return this.employee$;
