@@ -12,7 +12,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
       <span>Employees Management System</span>
     </mat-toolbar>
     <main>
-      <router-outlet />
+      <router-outlet></router-outlet>
     </main>
   `,
   styles: [`
