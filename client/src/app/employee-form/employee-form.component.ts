@@ -61,7 +61,7 @@ import {MatButton} from "@angular/material/button";
         color="primary"
         type="submit"
         [disabled]="employeeForm.invalid"
-        >Add
+        >Save
       </button>      
     </form>
   `,
