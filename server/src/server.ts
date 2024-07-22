@@ -2,6 +2,7 @@ import * as dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
 import { connectToDatabase } from "./database";
+import {employeeRouter} from "./employee.routes";
 
 dotenv.config();
 
@@ -17,6 +18,8 @@ connectToDatabase(ATLAS_URI)
         const app = express();
         app.use(cors());
         const port = 3000;
+
+        app.use("/employees", employeeRouter)
 
         app.listen(port, () => {
             console.log(`Server is running on port ${port}`);
